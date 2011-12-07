@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>RavenDB Studio.js</title>
+		<link href="screen.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>RavenDB</h1>
+		<ul id="menu">
+			<li class="selected"><a href="#summary">Summary</a></li>
+			<li><a href="#collections">Collections</a></li>
+			<li><a href="#indexes">Indexes</a></li>
+			<li><a href="#documents">Documents</a></li>
+			<li><a href="#tasks">Tasks</a></li>
+			<li><a href="#logs">Logs</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#databases">Default <b>▼</b></a></li>
+		</ul>
+		<div id="content">
+			<div id="page-summary">
+				<div id="summary-docs" class="panel">
+					<h2 class="ico doc">Recent Documents
+						<small>
+							<a href="#" id="summary-edit-doc" class="edit-doc">Edit Document By ID</a>
+							<a href="#" id="summary-create-doc" class="create-doc">Create a Document</a>
+							<span id="summary-paging"><b>◀</b> <i>Page 1 of 1</i> <b>▶</b></span>
+						</small>
+					</h2>
+					<ul id="summary-docs-list" class="documents">
+						<li><a href="#"><span>datetimeitems <span>3</span></span></a></li>
+						<li><a href="#"><span>Doc <span>test2</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="page-documents">
+				<div id="documents-docs" class="panel">
+					<h2 class="ico doc">Documents
+						<small>
+							<a href="#" id="documents-edit-doc" class="edit-doc">Edit Document By ID</a>
+							<a href="#" id="documents-create-doc" class="create-doc">Create a Document</a>
+							<span id="documents-paging"><b>◀</b> <i>Page 1 of 1</i> <b>▶</b></span>
+						</small>
+					</h2>
+					<ul id="documents-docs-list" class="documents">
+						<li><a href="#"><span>datetimeitems <span>3</span></span></a></li>
+						<li><a href="#"><span>Doc <span>test2</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="page-document">
+				<div class="panel">
+					<h2 class="ico doc"><a href="#" id="document-all">Documents</a> <i>></i> <span id="document-h2">New Document</span>
+						<small>
+							<a href="#" id="document-save" class="save">Save Document</a>
+							<a href="#" id="document-reformat" class="reformat">Reformat Document</a>
+							<a href="#" id="document-delete" class="delete">Delete Document</a>
+							<a href="#" id="document-refresh" class="refresh">Refresh Document</a>
+						</small>
+					</h2>
+					<form method="post" class="doc-editor">
+						<input id="document-id" value="datetimeitems/3" />
+						<div id="document-tabs" class="tabs">
+							<a href="#" class="selected">Data</a>
+							<a href="#">Metadata</a>
+						</div>
+						<div class="editor-wrap">
+							<pre id="document-data-editor">{
+	"Access-Control-Allow-Origin": "*",
+	"Access-Control-Max-Age": "1728000",
+	"Access-Control-Allow-Methods": "PUT,PATCH,GET,DELETE,POST",
+	"Raven-Entity-Name": "DateTimeItems",
+	"Raven-Clr-Type": "Nsdi.Tests.RavenDb.DateTimeTest+DateTimeItem, Nsdi.Tests"
+}</pre>
+						</div>
+						<div class="editor-wrap">
+							<pre id="document-meta-editor">{
+	"Access-Control-Allow-Origin": "*",
+	"Access-Control-Max-Age": "1728000",
+	"Access-Control-Allow-Methods": "PUT,PATCH,GET,DELETE,POST",
+	"Raven-Entity-Name": "DateTimeItems",
+	"Raven-Clr-Type": "Nsdi.Tests.RavenDb.DateTimeTest+DateTimeItem, Nsdi.Tests"
+}</pre>
+						</div>
+					</form>
+					<div class="metadata">
+						<h3>Metadata</h3>
+						<dl id="document-metadata">
+							<dt>Access-Control-Allow-Methods</dt>
+							<dd>PUT, PATCH, GET, DELETE, POST</dd>
+							<dt>Access-Control-Allow-Origin</dt>
+							<dd>*</dd>
+							<dt>Access-Control-Max-Age</dt>
+							<dd>1728000</dd>
+							<dt>Raven-Clr-Type</dt>
+							<dd>My.DateTimeItem, My.Tests</dd>
+							<dt>Raven-Entity-Name</dt>
+							<dd>DateTimeItems</dd>
+							<dt>ETag</dt>
+							<dd>00000000-0000-1500-0000-000000000003</dd>
+							<dt>Last-Modified</dt>
+							<dd>13.10.2011 16:50:41</dd>
+						</dl>
+						<p>Content-Length: 319 Bytes</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div id="page-collections">
+				<div>
+					<h2>Collections</h2>
+					<ul id="collections-list" class="collections">
+						<li><a href="#"><i></i><span>Enumerations <span>354</span></span></a></li>
+						<li><a href="#"><i></i><span>DistributedSituations<span>142</span></span></a></li>
+						<li><a href="#"><i></i><span>SourceSituations <span>134</span></span></a></li>
+					</ul>
+				</div>
+				<div id="collections-docs" class="panel">
+					<h2 class="ico doc">Documents
+						<small>
+							<a href="#" id="collections-edit-doc" class="edit-doc">Edit Document By ID</a>
+							<a href="#" id="collections-create-doc" class="create-doc">Create a Document</a>
+							<span id="collections-paging"><b>◀</b> <i>Page 1 of 1</i> <b>▶</b></span>
+						</small>
+					</h2>
+					<ul id="collections-docs-list" class="documents">
+						<li><a href="#"><span>datetimeitems <span>3</span></span></a></li>
+						<li><a href="#"><span>Doc <span>test2</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="page-indexes">
+				<div class="panel">
+					<h2 class="ico idx">Indexes
+						<small>
+							<a href="#" id="indexes-add" class="add-index">Create an Index</a>
+							<a href="#" id="indexes-query" class="query-index">Dynamic Query</a>
+						</small>
+					</h2>
+					<h3>Auto Indexes</h3>
+					<ul id="indexes-auto-list" class="indexes">
+						<li><a href="#">Auto/Enumerations/ByEnumType</a> <a href="#">Edit</a></li>
+					</ul>
+					<h3>Indexes</h3>
+					<ul id="indexes-list" class="indexes">
+						<li><a href="#">ApplicationAuthorizations</a> <a href="#">Edit</a></li>
+						<li><a href="#">ApplicationDescriptions</a> <a href="#">Edit</a></li>
+						<li><a href="#">Companies</a> <a href="#">Edit</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="page-define">
+				<div class="panel">
+					<h2 class="ico idx">Indexes > Index
+						<small>
+							<a href="#" class="add">Add Map</a>
+							<a href="#" class="add">Add Reduce</a>
+							<a href="#" class="add">Add Transform</a>
+							<a href="#" class="add">Add Field</a>
+							<a href="#" class="add">Add Field</a>
+							<a href="#" class="save">Save</a>
+							<a href="#" class="undo">Undo</a>
+							<a href="#" class="query-index">Query</a>
+							<a href="#" class="delete">Delete</a>
+						</small>
+					</h2>
+					<dl>
+						<dt>Name</dt>
+						<dd><input /></dd>
+						<dt>Maps</dt>
+						<dd>
+							<div class="editor-wrap editor-small">
+								<pre id="define-editor">Field1:value</pre>
+							</div>
+							<a href="#">Delete</a>
+							<div class="editor-wrap editor-small">
+								<pre id="define2-editor">Field1:value</pre>
+							</div>
+							<a href="#">Delete</a>
+						</dd>
+						<dt>Fields</dt>
+						<dd>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div id="page-query">
+				<div class="panel">
+					<h2 class="ico idx">Indexes > Index > Query
+						<small>
+							<a href="#" class="add">Add Sort By</a>
+							<a href="#" class="execute">Execute</a>
+						</small>
+					</h2>
+					<form method="post">
+						<div class="editor-wrap editor-small">
+							<pre id="query-editor">Field1:value</pre>
+						</div>
+						<p>Sort By</p>
+						<ul>
+							<li>
+								<select>
+									<option>Field1</option>
+									<option>Field2</option>
+								</select>
+								<a href="#">Remove</a>
+							</li>
+							<li>
+								<select>
+									<option>Field1</option>
+									<option>Field2</option>
+								</select>
+								<a href="#">Remove</a>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div id="query-docs" class="panel">
+					<h2 class="ico doc">Documents
+						<small>
+							<a href="#" id="query-edit-doc" class="edit-doc">Edit Document By ID</a>
+							<a href="#" id="query-create-doc" class="create-doc">Create a Document</a>
+							<span id="query-paging"><b>◀</b> <i id="query-page">Page 1 of 1</i> <b>▶</b></span>
+						</small>
+					</h2>
+					<ul id="query-docs-list" class="documents">
+						<li><a href="#"><span>datetimeitems <span>3</span></span></a></li>
+						<li><a href="#"><span>Doc <span>test2</span></span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="page-databases">
+				<div class="panel">
+					<h2 class="ico db">Databases
+						<small>
+							<a href="#" class="new-db">New Database</a>
+						</small>
+					</h2>
+					<ul id="databases-list" class="databases">
+						<li><a href="#">Default <span>654 documents</span></a></li>
+						<li><a href="#">AppMgmt <span>0 documents</span></a></li>
+						<li><a href="#">Log <span>0 documents</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="page-tasks">
+				<div class="panel">
+					<h2>Tasks
+						<small>
+							<a href="#" class="import-db">Import Database</a>
+							<a href="#" class="export-db">Export Database</a>
+						</small>
+					</h2>
+					<p>Import a database from a dump file.</p>
+					<p>Importing will overwrite any existing indexes.</p>
+					<p>
+						<button>Import Database</button>
+					</p>
+					<p class="log">
+						Importing from db.raven.dump<br />
+						Begin reading indexes<br />
+					</p>
+				</div>
+			</div>
+			<div id="page-logs">
+				<div class="panel">
+					<h2>Logs
+						<small>
+							<a href="#" class="all-logs" id="logs-all">All Logs</a>
+							<a href="#" class="error-logs" id="logs-errors">Errors Only</a>
+						</small>
+					</h2>
+					<div class="table-wrap">
+						<table>
+							<thead>
+								<tr>
+									<th></th>
+									<th>Level</th>
+									<th>Logged</th>
+									<th>Message</th>
+									<th>Exception</th>
+									<th>Log Name</th>
+								</tr>
+							</thead>
+							<tbody id="logs-tbody">
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="page-about">
+				<div class="panel">
+					<h2>About</h2>
+					<p><b>RavenDB Studio.js</b> admin UI uses HTML5, CSS3, JS, RavenDB HTTP API and famfamfam icons.</p>
+					<p>
+						I did not like the performance of the Silverlight RavenDB Studio, so I created this as a slick alternative.
+						RavenDB Studio.js is blazing fast and does not autorefresh the content without your action.
+						One day, I would like to see this studio as the default console instead of the Silverlight one.
+						You can say <b>thank you</b> via PayPal, if you like it.</p>
+					<p>
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="item_name" value="RavenDB Studio.js - Poradna.net">
+						<input type="hidden" name="hosted_button_id" value="MKTC4AH2VLWDE">
+						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="foot">
+			<a href="#">Statistics</a>
+			<a href="#">0 documents</a>
+			<a href="#">0 indexes</a>
+			<a href="#">0 stale</a>
+			<a href="#">0 errors</a>
+			<a href="#">0 triggers</a>
+			<a href="#">0 tasks</a>
+			<span>Build #0</span>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.7.js"></script>
+		<script src="jquery.ravendb.js"></script>
+		<script src="ace/ace.js"></script>
+		<script src="ace/theme-vs.js"></script>
+		<script src="ace/mode-json.js"></script>
+		<script src="studio.js"></script>
+	</body>
+</html>
